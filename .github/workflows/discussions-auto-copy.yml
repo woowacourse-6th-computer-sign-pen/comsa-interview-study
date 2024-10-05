@@ -1,0 +1,93 @@
+# .github/workflows/update-readme-with-discussion.yml
+name: Update README with New Discussions
+
+on:
+  discussion:
+    types: [created]
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+
+      - name: Extract Discussion Info
+        id: extract-info
+        run: |
+          # Extract discussion title, URL, and category name (topic)
+          echo "title=${{ github.event.discussion.title }}" >> $GITHUB_ENV
+          echo "url=${{ github.event.discussion.html_url }}" >> $GITHUB_ENV
+          echo "category=${{ github.event.discussion.category.name }}" >> $GITHUB_ENV
+
+      - name: Update README.md with new discussion link
+        run: |
+          # Create a backup of README.md
+          cp README.md README_backup.md
+          
+          # Get the new discussion link and category
+          discussion_link="- [${{ env.title }}](${{ env.url }})"
+          category="${{ env.category }}"
+
+          # Replace category names in Discussions with README category identifiers (with emoji)
+          declare -A category_map
+          category_map=(
+            ["🌲 Algorithm"]="🌲 Algorithm"
+            ["🖥️ Computer Architecture"]="🖥️ Computer Architecture"
+            ["💾 Database"]="💾 Database"
+            ["☁️ Infra"]="☁️ Infra"
+            ["🫘 Java"]="🫘 Java"
+            ["#️⃣ JPA"]="#️⃣ JPA"
+            ["🌐 Network"]="🌐 Network"
+            ["⭕ OS"]="⭕ OS"
+            ["🛠️ Software Engineering"]="🛠️ Software Engineering"
+            ["🌸 Spring"]="🌸 Spring"
+          )
+
+          # Exit early if the category doesn't exist in the map to avoid issues
+          if [ -z "${category_map[$category]}" ]; then
+            echo "Category '${category}' not found in the category_map. Exiting..."
+            exit 1
+          fi
+
+          # Identify the correct category in the README and insert the new discussion link
+          awk -v cat="${category_map[$category]}" -v link="${discussion_link}" '
+            BEGIN {found=0}
+            /<details>/ {if (found) {print ""; found=0}}
+            /<summary>/ {
+              if ($0 ~ cat) {
+                found=1
+              }
+            }
+            {print}
+            found {
+              # If </summary> is found, add a new line and then the discussion link
+              if ($0 ~ /<\/summary>/) {
+                print ""
+                print link
+                found=0
+              }
+            }
+          ' README_backup.md > README.md
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit changes
+        run: |
+          git add README.md
+          git commit -m "Add new discussion link to ${category_map[$category]}: ${{ env.title }}"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
