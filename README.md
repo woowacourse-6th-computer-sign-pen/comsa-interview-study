@@ -67,6 +67,8 @@
 
 <details> 
  <summary>💾 Database</summary>
+
+- [테스트용입니다.](https://github.com/woowacourse-6th-computer-sign-pen/comsa-interview-study/discussions/8)
  
 </details>
 
