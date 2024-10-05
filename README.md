@@ -57,6 +57,8 @@
 ## 면접 질문 리스트
 <details> 
  <summary>🌲 Algorithm</summary>
+
+- [테스트용입니다.](https://github.com/woowacourse-6th-computer-sign-pen/comsa-interview-study/discussions/7)
  
 </details>
 
