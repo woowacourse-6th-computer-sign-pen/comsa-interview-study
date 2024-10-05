@@ -50,3 +50,59 @@
 - 벌칙: Discussion에 정리를 담당한다.
 - 준비를 안해오거나 지각한 사람은 벌칙 당첨.
 - 다음 벌칙자가 나올 때까지 벌칙을 진행한다.
+
+<br>
+<br>
+
+## 면접 질문 리스트
+<details> 
+ <summary>🌲 Algorithm</summary>
+ 
+</details>
+
+<details> 
+ <summary>🖥️ Computer Architecture</summary>
+ 
+</details>
+
+<details> 
+ <summary>💾 Database</summary>
+ 
+</details>
+
+<details> 
+ <summary>☁️ Infra</summary>
+ 
+</details>
+
+<details> 
+ <summary>🫘 Java</summary>
+ 
+</details>
+
+<details> 
+ <summary>#️⃣ JPA</summary>
+ 
+</details>
+
+<details> 
+ <summary>🌐 Network</summary>
+ 
+ - [HTTP에서 keep-alive 가 무엇인지 설명하고, 필요한 이유에 대해 설명해보세요.](https://github.com/woowacourse-6th-computer-sign-pen/comsa-interview-study/discussions/2)
+</details>
+
+<details> 
+ <summary>⭕ OS</summary>
+ 
+</details>
+
+<details> 
+ <summary>🛠️ Software Engineering</summary>
+ 
+</details>
+
+<details> 
+ <summary>🌸 Spring</summary>
+ 
+</details>
+
