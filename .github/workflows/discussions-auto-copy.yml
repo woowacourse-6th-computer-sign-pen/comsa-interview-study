@@ -39,16 +39,16 @@ jobs:
           # Replace category names in Discussions with README category identifiers (with emoji)
           declare -A category_map
           category_map=(
-            ["🌲 Algorithm"]="🌲 Algorithm"
-            ["🖥️ Computer Architecture"]="🖥️ Computer Architecture"
-            ["💾 Database"]="💾 Database"
-            ["☁️ Infra"]="☁️ Infra"
-            ["🫘 Java"]="🫘 Java"
-            ["#️⃣ JPA"]="#️⃣ JPA"
-            ["🌐 Network"]="🌐 Network"
-            ["⭕ OS"]="⭕ OS"
-            ["🛠️ Software Engineering"]="🛠️ Software Engineering"
-            ["🌸 Spring"]="🌸 Spring"
+            ["Algorithm"]="🌲 Algorithm"
+            ["Computer Architecture"]="🖥️ Computer Architecture"
+            ["Database"]="💾 Database"
+            ["Infra"]="☁️ Infra"
+            ["Java"]="🫘 Java"
+            ["JPA"]="#️⃣ JPA"
+            ["Network"]="🌐 Network"
+            ["OS"]="⭕ OS"
+            ["Software Engineering"]="🛠️ Software Engineering"
+            ["Spring"]="🌸 Spring"
           )
 
           # Exit early if the category doesn't exist in the map to avoid issues
