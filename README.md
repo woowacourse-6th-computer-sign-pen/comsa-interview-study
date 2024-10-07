@@ -93,6 +93,8 @@
 
 <details> 
  <summary>⭕ OS</summary>
+
+- [뮤텍스와 세마포어를 설명하고 차이를 알려주세요.](https://github.com/woowacourse-6th-computer-sign-pen/comsa-interview-study/discussions/9)
  
 </details>
 
