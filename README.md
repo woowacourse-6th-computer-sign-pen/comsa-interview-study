@@ -82,6 +82,8 @@
 
 <details> 
  <summary>#️⃣ JPA</summary>
+
+- [OSIV 옵션에 대해서 설명해주세요.](https://github.com/woowacourse-6th-computer-sign-pen/comsa-interview-study/discussions/10)
  
 </details>
 
