@@ -91,6 +91,8 @@
 
 <details> 
  <summary>🌐 Network</summary>
+
+- [HTTP와 HTTPS의 차이를 설명하고 HTTPS 통신 원리에 대해 설명해주세요.](https://github.com/woowacourse-6th-computer-sign-pen/comsa-interview-study/discussions/12)
  
  - [HTTP에서 keep-alive 가 무엇인지 설명하고, 필요한 이유에 대해 설명해보세요.](https://github.com/woowacourse-6th-computer-sign-pen/comsa-interview-study/discussions/2)
 </details>
