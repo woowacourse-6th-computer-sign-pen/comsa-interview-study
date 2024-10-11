@@ -83,6 +83,8 @@
 <details> 
  <summary>#️⃣ JPA</summary>
 
+- [엔티티 매니저에 대해 설명해주세요.](https://github.com/woowacourse-6th-computer-sign-pen/comsa-interview-study/discussions/11)
+
 - [OSIV 옵션에 대해서 설명해주세요.](https://github.com/woowacourse-6th-computer-sign-pen/comsa-interview-study/discussions/10)
  
 </details>
