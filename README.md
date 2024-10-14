@@ -67,6 +67,8 @@
 
 <details> 
  <summary>💾 Database</summary>
+
+- [Nested Loop Join vs Hash Join (토스 면접 기출)](https://github.com/woowacourse-6th-computer-sign-pen/comsa-interview-study/discussions/13)
  
 </details>
 
