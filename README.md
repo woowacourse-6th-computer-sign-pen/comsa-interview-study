@@ -94,6 +94,8 @@
 <details> 
  <summary>🌐 Network</summary>
 
+- [CDN(Content Delivery Network)과 서버 캐시의 차이점은 무엇인가요? 각각 어떤 경우에 사용되나요?](https://github.com/woowacourse-6th-computer-sign-pen/comsa-interview-study/discussions/14)
+
 - [HTTP와 HTTPS의 차이를 설명하고 HTTPS 통신 원리에 대해 설명해주세요.](https://github.com/woowacourse-6th-computer-sign-pen/comsa-interview-study/discussions/12)
  
  - [HTTP에서 keep-alive 가 무엇인지 설명하고, 필요한 이유에 대해 설명해보세요.](https://github.com/woowacourse-6th-computer-sign-pen/comsa-interview-study/discussions/2)
